@@ -1,0 +1,21 @@
+#首先还是常规的导入库和读取文件
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from datetime import datetime
+#设定绘图风格
+plt.style.use('ggplot') 
+#由于原数据没有列名，我们手动传入列名列表，并以任意空格为分隔符号
+columns = ['user_id', 'order_dt', 'order_products', 
+'order_amount']
+df =pd.read_table(r'/Users/herenyi/Downloads/
+CDNOW_master.txt', names = columns, sep = '\s+')
+#查看下读取后的数据集概况
+df.head()
+df.describe()
+df.info()
+--------------------- 
+作者：Jump  
+来源：CSDN 
+原文：https://blog.csdn.net/weixin_42612434/article/details/83005212 
+版权声明：本文为博主原创文章，转载请附上博文链接！
